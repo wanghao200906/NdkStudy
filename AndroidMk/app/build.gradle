@@ -13,17 +13,17 @@ android {
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
 //       现在推荐使用externalNativeBuild 了。
-        ndk{
-            moduleName"hello-jni"
-            abiFilters "armeabi-v7a", "arm64-v8a", "x86", "x86_64"
-            ldLibs("log") //添加log 但是没有管用。尴尬
-        }
-//        // 指导我们的 源文件 编译
-//        externalNativeBuild {
-//            ndkBuild {
-//                abiFilters "armeabi-v7a", "arm64-v8a", "x86", "x86_64"
-//            }
+//        ndk{
+//            moduleName"hello-jni"
+//            abiFilters "armeabi-v7a", "arm64-v8a", "x86", "x86_64"
+//            ldLibs("log") //添加log 但是没有管用。尴尬
 //        }
+//        // 指导我们的 源文件 编译
+        externalNativeBuild {
+            ndkBuild {
+                abiFilters "armeabi-v7a", "arm64-v8a", "x86", "x86_64"
+            }
+        }
 
 
     }
