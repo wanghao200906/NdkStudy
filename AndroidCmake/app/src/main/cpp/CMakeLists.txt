@@ -33,8 +33,8 @@ add_library(
         native-lib.cpp)
 
 #搜索指定预先构建的库和存储路径变量。
-#因为CMake包括系统库搜索路径中默认情况下,只需要指定想添加公共NDK库的名称，在CMake验证库之前存在完成构建
-
+#查找系统库，这里查找的是系统日志库，并赋值给变量log-lib
+#这个log到底在哪呢？
 find_library(
         # 设置path变量的名称
         log-lib
@@ -45,6 +45,11 @@ find_library(
 # 指定库CMake应该链接到目标库中，可以链接多个库，比如定义库，构建脚本，预先构建的第三方库或者系统库
 target_link_libraries(  # 指定目标库
         native-lib
-
         # 目标库到日志库的链接 包含在NDK
         ${log-lib})
+
+#其实可以这样写，直接搜索log。就不用 find_library 语句了，但还是尊崇官方思路
+#target_link_libraries(  # 指定目标库
+#        native-lib
+#         目标库到日志库的链接 包含在NDK
+#        log)
