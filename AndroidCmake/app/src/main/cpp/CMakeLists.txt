@@ -15,7 +15,7 @@ message(WARNING "CMAKE_BINARY_DIR = ${CMAKE_BINARY_DIR}")
 #设置生成的so动态库最后输出的路径
 #但是项目会报错 More than one file was found with OS independent path 'lib/armeabi-v7a/libnative-lib.so'
 #但是文件确实是输出到指定目录了
-set(CMAKE_LIBRARY_OUTPUT_DIRECTORY ${PROJECT_SOURCE_DIR}/../MySo/${ANDROID_ABI})
+#set(CMAKE_LIBRARY_OUTPUT_DIRECTORY ${PROJECT_SOURCE_DIR}/../MySo/${ANDROID_ABI})
 
 
 # 创建并命名库，将其设置为静态的

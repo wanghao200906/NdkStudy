@@ -25,9 +25,9 @@ android {
             abiFilters 'x86', 'x86_64', 'armeabi-v7a', 'arm64-v8a'
         }
 //     指定让app加载哪个文件夹下的so文件。
-        sourceSets {
-            main.jniLibs.srcDirs = ['src/main/MySo']
-        }
+//        sourceSets {
+//            main.jniLibs.srcDirs = ['src/main/MySo']
+//        }
     }
 
     buildTypes {
