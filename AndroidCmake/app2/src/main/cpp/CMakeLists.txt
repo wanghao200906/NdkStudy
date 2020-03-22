@@ -9,7 +9,8 @@ add_library(
         SHARED #生成so库
         native-lib2.cpp) #应用native-lib2.cpp代码生成 native-lib2.so
 # 设置第三方so库的路径 CMAKE_CXX_FLAGS是给c++配置一个三方库的路径
-set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -L${CMAKE_SOURCE_DIR}/../jniLibs/${CMAKE_ANDROID_ARCH_ABI}")
+set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -L${CMAKE_SOURCE_DIR}/../jniLibs/${CMAKE_ANDROID_ARCH_ABI} -std=gnu++11")
+#set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS}  -std=gnu++11")
 
 # CMAKE_C_FLAGS 是给c编译器配置一个 三方库的路径
 #set(CMAKE_C_FLAGS "${CMAKE_CXX_FLAGS} -L${CMAKE_SOURCE_DIR}/../jniLibs/${CMAKE_ANDROID_ARCH_ABI}")

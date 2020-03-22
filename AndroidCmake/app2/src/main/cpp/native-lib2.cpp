@@ -4,7 +4,6 @@
 #include <fmod.hpp>
 
 using namespace FMOD;
-
 extern "C"
 JNIEXPORT jstring JNICALL
 Java_com_androidcmake_example_MainActivity_stringFromJNIMethod(JNIEnv *env, jobject thiz) {
