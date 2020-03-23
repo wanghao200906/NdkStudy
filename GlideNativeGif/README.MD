@@ -21,7 +21,7 @@
 - 将app中的so拷贝到giflib的jniLibs中。
 - 将framesequence的src/android/support/rastermill文件下的FrameSequence.java、FrameSequenceDrawable.java拷贝到项目中。android/support/rastermill的路径不可以变。
 - 在配合glide就可以使用了。
-- 项目中有一个14m的gif。可以很顺画的显示
+- 项目中有一个14m的gif。可以很顺滑的显示
 
 
 #### 感觉得缺点
