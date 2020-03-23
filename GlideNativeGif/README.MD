@@ -2,9 +2,9 @@
 - 谷歌推出的framesequence
     -   https://android.googlesource.com/platform/frameworks/ex/+/refs/tags/android-9.0.0_r54/framesequence/
 - 谷歌推出的giflib
- -   https://android.googlesource.com/platform/external/giflib/+/refs/tags/android-9.0.0_r54
+    -   https://android.googlesource.com/platform/external/giflib/+/refs/tags/android-9.0.0_r54
 -   谷歌推出的webp
-  -   https://android.googlesource.com/platform/external/webp/+/refs/tags/android-9.0.0_r54
+     -   https://android.googlesource.com/platform/external/webp/+/refs/tags/android-9.0.0_r54
 
 - 这个需要翻墙，如果不能翻墙可以直接从资料中获取。如果不会编译，可以从app的jniLibs中获取四个平台的so
 
