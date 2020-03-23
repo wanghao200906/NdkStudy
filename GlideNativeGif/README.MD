@@ -16,7 +16,7 @@
  - 删除了framesequence的webp的代码 FrameSequence_webp.h，FrameSequence.cpp
 - 本次编译全部都是使用cmake编译的。代码中删除了.mk、.bp的文件。cmake的编译更加简单，代码更少。
 
-#### giflib module
+#### glideGif module
 - 就是使用so
 - 将app中的so拷贝到giflib的jniLibs中。
 - 将framesequence的src/android/support/rastermill文件下的FrameSequence.java、FrameSequenceDrawable.java拷贝到项目中。android/support/rastermill的路径不可以变。
