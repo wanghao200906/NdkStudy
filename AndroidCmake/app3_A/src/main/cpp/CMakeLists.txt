@@ -35,6 +35,11 @@ target_include_directories(hello-libs PRIVATE
         ${distribution_DIR}/gmath/include
         ${distribution_DIR}/gperf/include)
 
+#这样也行可以替代target_include_directories 。但是还是推荐使用target_include_directories
+#include_directories(${distribution_DIR}/gmath/include
+#        ${distribution_DIR}/gperf/include)
+
+
 #这里要应用 lib_gmath和lib_gperf
 target_link_libraries(hello-libs
         android
