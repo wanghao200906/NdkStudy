@@ -3,13 +3,13 @@ package com.gif.glidegif;
 import android.os.Bundle;
 import android.widget.ImageView;
 
-import com.bumptech.glide.Glide;
+import androidx.appcompat.app.AppCompatActivity;
+
+import com.gif.glidegif.glide.GlideApp;
 
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
-
-import androidx.appcompat.app.AppCompatActivity;
 
 
 public class MainActivity extends AppCompatActivity {
@@ -32,13 +32,19 @@ public class MainActivity extends AppCompatActivity {
         } catch (IOException e) {
             e.printStackTrace();
         }
-
-        Glide.with(this)
-                .load(bytes)
-//                .load("http://hiphotos.baidu.com/feed/pic/item/ac4bd11373f082025e367b9f47fbfbedaa641bed.gif")
+        GlideApp.with(this)
+//                .asGifFs()
+//                .load(bytes)
+                .load("http://hiphotos.baidu.com/feed/pic/item/ac4bd11373f082025e367b9f47fbfbedaa641bed.gif")
                 .placeholder(R.drawable.ic_launcher_background)
                 .error(R.drawable.ic_launcher_foreground)
                 .into(ivGif);
+//        Glide.with(this)
+//                .load(bytes)
+////                .load("http://hiphotos.baidu.com/feed/pic/item/ac4bd11373f082025e367b9f47fbfbedaa641bed.gif")
+//                .placeholder(R.drawable.ic_launcher_background)
+//                .error(R.drawable.ic_launcher_foreground)
+//                .into(ivGif);
 
 
     }

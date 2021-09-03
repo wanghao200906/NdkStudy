@@ -18,12 +18,16 @@ android {
                 cppFlags ""
             }
         }
+        packagingOptions {
+            pickFirst 'lib/armeabi-v7a/libframesequence.so'
+        }
 
         ndk {
 //          让项目 使用哪些平台的so库。
 //          这些平台的so库会打包到apk中，
 //          或者打算使用三方so操作一下生成输出一个自己的so的时候，那个三方的so是用什么平台，也是用这个进行配置
-            abiFilters 'x86', 'x86_64', 'armeabi-v7a', 'arm64-v8a'
+            abiFilters 'armeabi-v7a'
+//            'x86', 'x86_64', 'armeabi-v7a', 'arm64-v8a'
         }
     }
 
@@ -40,6 +44,7 @@ android {
             version "3.10.2"
         }
     }
+    ndkVersion '22.1.7171670'
 }
 
 dependencies {
